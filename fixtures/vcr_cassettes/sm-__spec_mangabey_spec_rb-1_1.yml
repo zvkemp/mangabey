@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.surveymonkey.com/v3/surveys
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - Bearer faketoken
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 21 Oct 2018 17:32:28 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '207'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - ep201=Ws0II2eu8jb6HFAipY/qfFDMDxY=; Domain=.surveymonkey.com; Path=/; Expires=Sun,
+        21-Oct-18 18:02:28 GMT
+      - ep202=Vkp8qJMof5heKQE3Li92A9+rX3c=; Domain=.surveymonkey.com; Path=/; Expires=Sat,
+        19-Jan-19 17:32:28 GMT
+      - ep203=agAfZLrO7e85Fuy9u7vujA/PqKo=; Domain=.surveymonkey.com; Path=/; Expires=Sat,
+        19-Jan-19 17:32:28 GMT
+      Sm-Request-Id:
+      - e23bccac-42da-4bb5-bba7-ff18d3ebb2be
+      Cache-Control:
+      - no-store, no-cache, max-age=0, private, must-revalidate
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type, Pragma, Cache-Control, X-Requested-With
+      Access-Control-Allow-Methods:
+      - POST, GET, PATCH, PUT, DELETE, OPTIONS, HEAD
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: '{"error": {"docs": "https://developer.surveymonkey.com/api/v3/#error-codes",
+        "message": "The authorization token provided was invalid.", "id": "1011",
+        "name": "Authorization Error", "http_status_code": 401}}'
+    http_version: 
+  recorded_at: Sun, 21 Oct 2018 17:32:28 GMT
+recorded_with: VCR 4.0.0

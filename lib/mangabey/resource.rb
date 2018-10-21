@@ -2,28 +2,19 @@ module Mangabey
   class Resource
     include Model::HasData
 
-    def self.all(client)
-      Enumerator.new do |yielder|
-        page_url = Mangabey::API_ROOT.join(path)
-        yield_page(client, yielder, page_url)
-      end
+    def self.all(client, scope = nil)
+      Mangabey::ClientPager.new(client, self, scope).all
     end
 
-    def self.yield_page(client, yielder, page_url)
-      loop do
-        page = ClientPage.new(client.get(page_url), self, client)
-        page.elements.each do |elem|
-          yielder << elem
-        end
-
-        page_url = page.next_url or return
-      end
+    def self.find(client, id)
+      attrs = { 'id' => id.to_s, 'href' => Mangabey::API_ROOT.join(path, id.to_s) }
+      new(from_sparse: attrs, client: client)
     end
 
     attr_reader :data, :client
 
-    def initialize(from_list: {}, from_details: {}, client:)
-      @data = from_list.merge(from_details)
+    def initialize(from_sparse: {}, from_details: {}, client:)
+      @data = from_sparse.merge(from_details)
       @details_loaded = !from_details.empty?
       @client = client
     end

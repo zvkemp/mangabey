@@ -14,7 +14,7 @@ module Mangabey
 
     def elements
       data['data'].map do |elem|
-        resource_class.new(from_list: elem, client: client)
+        resource_class.new(from_sparse: elem, client: client)
       end
     end
 

@@ -18,4 +18,27 @@ RSpec.describe Mangabey do
     expect(survey.questions.count).to eq(8)
     expect(survey.details_loaded?).to eq(true)
   end
+
+  specify '.find', :vcr do
+    client = Mangabey::Client.new(token)
+    survey = client.surveys.find(160281378)
+    expect(survey.details_loaded?).to eq(false)
+    survey.title
+    expect(survey.details_loaded?).to eq(true)
+  end
+
+  specify 'survey#respondents', :vcr do
+    client = Mangabey::Client.new(token)
+    survey = client.surveys.find(160281378)
+    expect(survey.details_loaded?).to eq(false)
+    responses = survey.responses.all.to_a
+    expect(survey.details_loaded?).to eq(false)
+
+    expect(responses.count).to eq(2)
+    responses.each do |r|
+      expect(r.details_loaded?).to eq(false)
+      r.ip_address
+      r.load_details!
+    end
+  end
 end

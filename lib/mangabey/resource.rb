@@ -24,6 +24,7 @@ module Mangabey
     end
 
     def load_details!
+      return if details_loaded?
       body = JSON.parse(client.get(details_url).body)
       @data.merge!(body)
       @details_loaded = true

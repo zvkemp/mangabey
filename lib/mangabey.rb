@@ -19,6 +19,8 @@ module Mangabey
   autoload :Question, 'mangabey/question'
   autoload :Response, 'mangabey/response'
 
+  LOGGER = Logger.new(STDOUT)
+
   class << self
     def api_root
       API_ROOT

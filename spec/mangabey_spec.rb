@@ -38,7 +38,7 @@ RSpec.describe Mangabey do
     responses.each do |r|
       expect(r.details_loaded?).to eq(false)
       r.ip_address
-      r.load_details!
+      expect(r).to be_details_loaded
     end
   end
 end

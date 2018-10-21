@@ -41,3 +41,5 @@ RSpec.configure do |config|
     VCR.use_cassette("sm-#{file_path}-#{scoped_id}", &ex)
   end
 end
+
+Mangabey::LOGGER.level = Logger::DEBUG

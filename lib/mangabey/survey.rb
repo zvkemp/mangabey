@@ -69,5 +69,10 @@ module Mangabey
         end
       end
     end
+
+    def responses
+      # https://api.surveymonkey.com/v3/surveys/{survey_id}/responses
+      Mangabey::ClientResource.new(client, Response, href)
+    end
   end
 end

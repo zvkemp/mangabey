@@ -9,7 +9,7 @@ require 'dotenv'
 WebMock.disable_net_connect!
 
 Dotenv.load
-
+external_ip = `dig +short myip.opendns.com @resolver1.opendns.com`
 VCR.configure do |config|
   config.cassette_library_dir = "fixtures/vcr_cassettes"
   config.hook_into :webmock # or :fakeweb
@@ -20,6 +20,8 @@ VCR.configure do |config|
   config.filter_sensitive_data('<REDACTED>') do
     ENV['MANGABEY_ACCESS_TOKEN']
   end
+
+  config.filter_sensitive_data('1.2.3.4') { external_ip }
 end
 
 RSpec.configure do |config|
@@ -39,3 +41,5 @@ RSpec.configure do |config|
     VCR.use_cassette("sm-#{file_path}-#{scoped_id}", &ex)
   end
 end
+
+Mangabey::LOGGER.level = Logger::DEBUG

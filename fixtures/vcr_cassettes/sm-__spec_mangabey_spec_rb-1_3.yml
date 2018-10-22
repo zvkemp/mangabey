@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.surveymonkey.com/v3/surveys/160281378/details
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - Bearer <REDACTED>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 21 Oct 2018 18:57:59 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1630'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding, User-Agent
+      Set-Cookie:
+      - ep201=2wgUjyXGEuZHrhmpwrtpqBL/OK0=; Domain=.surveymonkey.com; Path=/; Expires=Sun,
+        21-Oct-18 19:27:58 GMT
+      - ep202=/y5rBfqvq7jUwvj9iYzHNQtHmu8=; Domain=.surveymonkey.com; Path=/; Expires=Sat,
+        19-Jan-19 18:57:58 GMT
+      - ep203=0LD5d1tVWXughmcyu3si+m0PJAM=; Domain=.surveymonkey.com; Path=/; Expires=Sat,
+        19-Jan-19 18:57:58 GMT
+      X-Ratelimit-App-Global-Minute-Limit:
+      - '120'
+      X-Ratelimit-App-Global-Minute-Remaining:
+      - '113'
+      X-Ratelimit-App-Global-Minute-Reset:
+      - '1'
+      X-Ratelimit-App-Global-Day-Limit:
+      - '500'
+      X-Ratelimit-App-Global-Day-Remaining:
+      - '469'
+      X-Ratelimit-App-Global-Day-Reset:
+      - '18121'
+      Sm-Request-Id:
+      - 30f2b2fa-9fc8-44bd-bb85-6eecb352115b
+      X-Oauth-Scopes-Granted:
+      - responses_read,responses_read_detail,surveys_read
+      X-Oauth-Scopes-Available:
+      - users_read,surveys_read,collectors_read,collectors_write,contacts_read,contacts_write,surveys_write,responses_read,webhooks_read,webhooks_write,library_read
+      Cache-Control:
+      - no-store, no-cache, max-age=0, private, must-revalidate
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type, Pragma, Cache-Control, X-Requested-With
+      Access-Control-Allow-Methods:
+      - POST, GET, PATCH, PUT, DELETE, OPTIONS, HEAD
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: ASCII-8BIT
+      string: '{"response_count":2,"page_count":1,"date_created":"2018-10-20T17:29:00","buttons_text":{"done_button":"Done","prev_button":"Prev","exit_button":"","next_button":"Next"},"folder_id":"0","custom_variables":{},"nickname":"","id":"160281378","question_count":8,"category":"","preview":"https:\/\/www.surveymonkey.com\/r\/Preview\/?sm=WKqrfpqIrJFk9Y1udbloKJYuNlvKRysapSQ8_2BzMqb6nIWnDde5CS0KkuZlVa3Hww","is_owner":true,"language":"en","footer":true,"date_modified":"2018-10-21T17:57:00","analyze_url":"https:\/\/www.surveymonkey.com\/analyze\/6oYd5R94ei6uEhoHBOhalu2LM7_2B2ALTVdbA7CPPkcYY_3D","pages":[{"href":"https:\/\/api.surveymonkey.com\/v3\/surveys\/160281378\/pages\/46837222","description":"","questions":[{"display_options":{"show_display_number":false},"sorting":null,"family":"presentation","subtype":"descriptive_text","required":null,"visible":true,"href":"https:\/\/api.surveymonkey.com\/v3\/surveys\/160281378\/pages\/46837222\/questions\/163029143","headings":[{"heading":"<span
+        style=\"font-size: 14pt;\">Thank you for attending test-performance. Your
+        feedback will help us to improve future events.<\/span>"}],"position":1,"validation":null,"id":"163029143","forced_ranking":false},{"sorting":null,"family":"single_choice","subtype":"vertical","required":null,"answers":{"choices":[{"quiz_options":{"score":0},"visible":true,"text":"Excellent","position":1,"id":"1146593563"},{"quiz_options":{"score":0},"visible":true,"text":"Very
+        good","position":2,"id":"1146593564"},{"quiz_options":{"score":0},"visible":true,"text":"Good","position":3,"id":"1146593565"},{"quiz_options":{"score":0},"visible":true,"text":"Fair","position":4,"id":"1146593566"},{"quiz_options":{"score":0},"visible":true,"text":"Poor","position":5,"id":"1146593567"}]},"visible":true,"href":"https:\/\/api.surveymonkey.com\/v3\/surveys\/160281378\/pages\/46837222\/questions\/163029141","headings":[{"heading":"Overall,
+        how would you rate the event?"}],"position":2,"validation":null,"id":"163029141","forced_ranking":false},{"sorting":null,"family":"open_ended","subtype":"essay","required":null,"visible":true,"href":"https:\/\/api.surveymonkey.com\/v3\/surveys\/160281378\/pages\/46837222\/questions\/163029144","headings":[{"heading":"What
+        did you like about the event?"}],"position":3,"validation":null,"id":"163029144","forced_ranking":false},{"sorting":null,"family":"open_ended","subtype":"essay","required":null,"visible":true,"href":"https:\/\/api.surveymonkey.com\/v3\/surveys\/160281378\/pages\/46837222\/questions\/163029145","headings":[{"heading":"What
+        did you dislike about the event?"}],"position":4,"validation":null,"id":"163029145","forced_ranking":false},{"sorting":null,"family":"single_choice","subtype":"vertical","required":null,"answers":{"choices":[{"quiz_options":{"score":0},"visible":true,"text":"Extremely
+        organized","position":1,"id":"1146593568"},{"quiz_options":{"score":0},"visible":true,"text":"Very
+        organized","position":2,"id":"1146593569"},{"quiz_options":{"score":0},"visible":true,"text":"Somewhat
+        organized","position":3,"id":"1146593570"},{"quiz_options":{"score":0},"visible":true,"text":"Not
+        so organized","position":4,"id":"1146593571"},{"quiz_options":{"score":0},"visible":true,"text":"Not
+        at all organized","position":5,"id":"1146593572"}]},"visible":true,"href":"https:\/\/api.surveymonkey.com\/v3\/surveys\/160281378\/pages\/46837222\/questions\/163029142","headings":[{"heading":"How
+        organized was the event?"}],"position":5,"validation":null,"id":"163029142","forced_ranking":false},{"sorting":null,"family":"single_choice","subtype":"vertical","required":null,"answers":{"choices":[{"quiz_options":{"score":0},"visible":true,"text":"Extremely
+        friendly","position":1,"id":"1146593574"},{"quiz_options":{"score":0},"visible":true,"text":"Very
+        friendly","position":2,"id":"1146593575"},{"quiz_options":{"score":0},"visible":true,"text":"Somewhat
+        friendly","position":3,"id":"1146593576"},{"quiz_options":{"score":0},"visible":true,"text":"Not
+        so friendly","position":4,"id":"1146593577"},{"quiz_options":{"score":0},"visible":true,"text":"Not
+        at all friendly","position":5,"id":"1146593578"}]},"visible":true,"href":"https:\/\/api.surveymonkey.com\/v3\/surveys\/160281378\/pages\/46837222\/questions\/163029146","headings":[{"heading":"How
+        friendly was the staff at the event?"}],"position":6,"validation":null,"id":"163029146","forced_ranking":false},{"sorting":null,"family":"open_ended","subtype":"essay","required":null,"visible":true,"href":"https:\/\/api.surveymonkey.com\/v3\/surveys\/160281378\/pages\/46837222\/questions\/163029147","headings":[{"heading":"Was
+        there any information that would have been helpful to know before the event?"}],"position":7,"validation":null,"id":"163029147","forced_ranking":false},{"sorting":null,"family":"single_choice","subtype":"vertical","required":null,"answers":{"choices":[{"quiz_options":{"score":0},"visible":true,"text":"Much
+        too long","position":1,"id":"1146593579"},{"quiz_options":{"score":0},"visible":true,"text":"Too
+        long","position":2,"id":"1146593580"},{"quiz_options":{"score":0},"visible":true,"text":"About
+        right","position":3,"id":"1146593581"},{"quiz_options":{"score":0},"visible":true,"text":"Too
+        short","position":4,"id":"1146593582"},{"quiz_options":{"score":0},"visible":true,"text":"Much
+        too short","position":5,"id":"1146593583"}]},"visible":true,"href":"https:\/\/api.surveymonkey.com\/v3\/surveys\/160281378\/pages\/46837222\/questions\/163029148","headings":[{"heading":"Was
+        the event length too long, too short or about right?"}],"position":8,"validation":null,"id":"163029148","forced_ranking":false}],"title":"","position":1,"id":"46837222","question_count":8}],"summary_url":"https:\/\/www.surveymonkey.com\/summary\/6oYd5R94ei6uEhoHBOhalu2LM7_2B2ALTVdbA7CPPkcYY_3D","href":"https:\/\/api.surveymonkey.com\/v3\/surveys\/160281378","title":"Post-Event
+        Feedback Survey","collect_url":"https:\/\/www.surveymonkey.com\/collect\/list?sm=6oYd5R94ei6uEhoHBOhalu2LM7_2B2ALTVdbA7CPPkcYY_3D","edit_url":"https:\/\/www.surveymonkey.com\/create\/?sm=6oYd5R94ei6uEhoHBOhalu2LM7_2B2ALTVdbA7CPPkcYY_3D"}'
+    http_version: 
+  recorded_at: Sun, 21 Oct 2018 18:57:59 GMT
+recorded_with: VCR 4.0.0

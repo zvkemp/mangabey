@@ -11,11 +11,15 @@ module Mangabey
   autoload :Client, 'mangabey/client'
   autoload :ClientResource, 'mangabey/client_resource'
   autoload :ClientPage, 'mangabey/client_page'
+  autoload :ClientPager, 'mangabey/client_pager'
   autoload :Model, 'mangabey/model'
   autoload :Resource, 'mangabey/resource'
 
   autoload :Survey, 'mangabey/survey'
   autoload :Question, 'mangabey/question'
+  autoload :Response, 'mangabey/response'
+
+  LOGGER = Logger.new(STDOUT)
 
   class << self
     def api_root

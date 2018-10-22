@@ -23,6 +23,7 @@ module Mangabey
     end
 
     def get(url, *args)
+      Mangabey::LOGGER.debug("[GET] #{url.to_s}")
       oauth_token.get(url.to_s, *args).tap do |resp|
         raise Error.new unless resp.status == 200
       end

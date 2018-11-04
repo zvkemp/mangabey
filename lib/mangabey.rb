@@ -2,6 +2,11 @@ require "mangabey/version"
 require 'oauth2'
 require 'pathname'
 
+if $0.end_with?('bundle') && ARGV == ['console']
+  require 'dotenv'
+  Dotenv.load
+end
+
 module Mangabey
   API_ROOT = Pathname.new('/v3')
 
@@ -14,6 +19,7 @@ module Mangabey
   autoload :ClientPager, 'mangabey/client_pager'
   autoload :Model, 'mangabey/model'
   autoload :Resource, 'mangabey/resource'
+  autoload :BulkResource, 'mangabey/bulk_resource'
 
   autoload :Survey, 'mangabey/survey'
   autoload :Question, 'mangabey/question'
@@ -34,8 +40,14 @@ module Mangabey
       )
     end
 
-    def oauth_access_token(token = ENV['MANGABEY_ACCESS_TOKEN'], opts = {})
+    def oauth_access_token(token = nil, opts = {})
+      return token if token.is_a?(OAuth2::AccessToken)
+      token ||= ENV['MANGABEY_ACCESS_TOKEN']
       OAuth2::AccessToken.new(oauth_client, token, opts)
+    end
+
+    def logger
+      Mangabey::LOGGER
     end
   end
 end

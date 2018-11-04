@@ -1,3 +1,5 @@
+require 'time'
+
 module Mangabey
   class Survey < Resource
     # {
@@ -70,9 +72,15 @@ module Mangabey
       end
     end
 
-    def responses
+    def responses(bulk: false, after: nil)
+      resource = Response
+      resource = BulkResource.new(resource) if bulk
       # https://api.surveymonkey.com/v3/surveys/{survey_id}/responses
-      Mangabey::ClientResource.new(client, Response, href)
+      query = {}
+      if after
+        query[:start_modified_at] = after.to_time.iso8601
+      end
+      Mangabey::ClientResource.new(client, resource, "surveys/#{id}", query)
     end
   end
 end

@@ -1,6 +1,6 @@
 module Mangabey
   class Client
-    def initialize(token, opts = {})
+    def initialize(token = nil, opts = {})
       @oauth_token = Mangabey.oauth_access_token(token, opts)
     end
 

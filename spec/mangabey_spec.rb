@@ -36,9 +36,47 @@ RSpec.describe Mangabey do
 
     expect(responses.count).to eq(2)
     responses.each do |r|
-      expect(r.details_loaded?).to eq(false)
+      expect(r).not_to be_details_loaded
       r.ip_address
       expect(r).to be_details_loaded
+    end
+  end
+
+  specify 'surveys#search', :vcr do
+    client = Mangabey::Client.new
+    surveys = client.surveys.all(title: 'test')
+  end
+
+  context 'test survey' do
+    let(:client) { Mangabey::Client.new }
+    let(:survey) { client.surveys.find(43502721) }
+    specify '.find', :vcr do
+      expect(survey.details_loaded?).to eq(false)
+      survey.load_details!
+    end
+
+    specify 'respondents', :vcr do
+      responses = survey.responses.all.to_a
+      responses.each(&:load_details!)
+    end
+
+    specify 'bulk respondents', :vcr do
+      responses = survey.responses(bulk: true).all.to_a # bulk includes all answers)
+      expect(responses.count).to eq(4)
+      responses.each do |r|
+        expect(r).to be_details_loaded
+      end
+    end
+
+    let(:timestamp) { Time.new(2014, 1, 1, 0, 0, 0, 0) }
+
+    specify 'bulk respondents with start_modified_at', :vcr do
+      responses = survey.responses(bulk: true, after: timestamp).all.to_a
+      expect(responses.count).to eq(2)
+      responses.each do |r|
+        expect(r).to be_details_loaded
+        expect(Time.parse(r.data['date_modified'])).to be > timestamp
+      end
     end
   end
 end

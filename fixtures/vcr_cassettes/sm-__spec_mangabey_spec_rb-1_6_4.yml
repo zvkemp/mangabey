@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.surveymonkey.com/v3/surveys/43502721/responses/bulk?start_modified_at=2014-01-01T00:00:00%2B00:00
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - Bearer <REDACTED>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 04 Nov 2018 18:40:52 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '994'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding, User-Agent
+      Set-Cookie:
+      - ep201=bkCqne3w+dLmqsWLOvvC/PNkGfk=; Domain=.surveymonkey.com; Path=/; Expires=Sun,
+        04-Nov-18 19:10:51 GMT
+      - ep202=OzWd33kJDDK19KB6Pb2LobZyIA0=; Domain=.surveymonkey.com; Path=/; Expires=Sat,
+        02-Feb-19 18:40:51 GMT
+      - ep203=IzT/CpbMGWtgo5n451hNySiWHes=; Domain=.surveymonkey.com; Path=/; Expires=Sat,
+        02-Feb-19 18:40:51 GMT
+      X-Ratelimit-App-Global-Minute-Limit:
+      - '120'
+      X-Ratelimit-App-Global-Minute-Remaining:
+      - '119'
+      X-Ratelimit-App-Global-Minute-Reset:
+      - '8'
+      X-Ratelimit-App-Global-Day-Limit:
+      - '500'
+      X-Ratelimit-App-Global-Day-Remaining:
+      - '476'
+      X-Ratelimit-App-Global-Day-Reset:
+      - '19148'
+      Link:
+      - <https://api.surveymonkey.net/v3/surveys/43502721/responses/bulk?page=1&per_page=50>;
+        rel="self"
+      Sm-Request-Id:
+      - 02c6c6c3-4cc5-422c-b9d1-fea0a511f4af
+      X-Oauth-Scopes-Granted:
+      - collectors_read,responses_read_detail,surveys_read,responses_read
+      X-Oauth-Scopes-Available:
+      - users_read,surveys_read,collectors_read,collectors_write,contacts_read,contacts_write,surveys_write,responses_read,responses_read_detail,responses_write,groups_read,webhooks_read,webhooks_write,library_read,workgroups_read,workgroups_write,workgroups_members_read,workgroups_members_write,roles_read,roles_write,workgroups_shares_read,workgroups_shares_write
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type, Pragma, Cache-Control, X-Requested-With
+      Access-Control-Allow-Methods:
+      - POST, GET, PATCH, PUT, DELETE, OPTIONS, HEAD
+      Access-Control-Allow-Origin:
+      - "*"
+      Expires:
+      - Thu, 01 Jan 1970 00:00:01 GMT
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: ASCII-8BIT
+      string: '{"per_page":50,"total":2,"data":[{"total_time":18,"href":"https:\/\/api.surveymonkey.com\/v3\/surveys\/43502721\/responses\/3178142281","custom_variables":{"custom_var_b":"2014-12-24","custom_var_a":"8:00"},"ip_address":"71.202.125.51","id":"3178142281","logic_path":{},"date_modified":"2014-04-11T22:28:39+00:00","response_status":"completed","custom_value":"","analyze_url":"https:\/\/www.surveymonkey.com\/analyze\/browse\/MayZxF9z93_2BVU9jsmFxucM9jsHMMUOtmDkNB7INulkc_3D?respondent_id=3178142281","pages":[{"id":"143202535","questions":[{"variable_id":"6438914518","id":"553892406","answers":[{}]},{"id":"554289973","answers":[{"choice_id":"6443474737"}]}]},{"id":"143202738","questions":[]},{"id":"143202825","questions":[]},{"id":"143203056","questions":[]},{"id":"143203226","questions":[]},{"id":"143203441","questions":[]}],"page_path":[],"recipient_id":"","collector_id":"44135648","date_created":"2014-04-11T22:28:21+00:00","survey_id":"43502721","collection_mode":"default","edit_url":"https:\/\/www.surveymonkey.com\/r\/?sm=nOsyq8krC8KM9J8uHCFhh_2FG6OGG_2BgKlDFU5ecSyF5oH3PaCo5MvWoihPeTHh93oN","metadata":{}},{"total_time":19863893,"href":"https:\/\/api.surveymonkey.com\/v3\/surveys\/43502721\/responses\/2778871364","custom_variables":{},"ip_address":"69.181.221.13","id":"2778871364","logic_path":{},"date_modified":"2014-04-11T23:09:02+00:00","response_status":"completed","custom_value":"","analyze_url":"https:\/\/www.surveymonkey.com\/analyze\/browse\/MayZxF9z93_2BVU9jsmFxucM9jsHMMUOtmDkNB7INulkc_3D?respondent_id=2778871364","pages":[{"id":"143202535","questions":[{"variable_id":"6438914514","id":"553892406","answers":[{}]},{"id":"554289973","answers":[{"choice_id":"6443474736"}]},{"id":"553892672","answers":[{"choice_id":"6438917824"}]},{"id":"553892857","answers":[{"choice_id":"6438920433"}]},{"id":"553893036","answers":[{"choice_id":"6438922563"}]}]},{"id":"143202738","questions":[]},{"id":"143202825","questions":[]},{"id":"143203056","questions":[]},{"id":"143203226","questions":[]},{"id":"143203441","questions":[]}],"page_path":["-1"],"recipient_id":"","collector_id":"44135648","date_created":"2013-08-25T01:24:08+00:00","survey_id":"43502721","collection_mode":"default","edit_url":"https:\/\/www.surveymonkey.com\/r\/?sm=N5MVHzrEL2xW6qHDatxy5WKQ_2FGaNdHCH414m36IkSCjrQ1pBXyLd13cHp912tza4","metadata":{}}],"page":1,"links":{"self":"https:\/\/api.surveymonkey.net\/v3\/surveys\/43502721\/responses\/bulk?page=1&per_page=50"}}'
+    http_version: 
+  recorded_at: Sun, 04 Nov 2018 18:40:52 GMT
+recorded_with: VCR 4.0.0

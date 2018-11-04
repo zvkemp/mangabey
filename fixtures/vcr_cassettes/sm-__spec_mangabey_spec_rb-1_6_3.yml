@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.surveymonkey.com/v3/surveys/43502721/responses/bulk
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Authorization:
+      - Bearer <REDACTED>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 04 Nov 2018 18:14:35 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3158'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding, User-Agent
+      Set-Cookie:
+      - ep201=LIOjBzbdyQJNzbXRZThtmAX3M6I=; Domain=.surveymonkey.com; Path=/; Expires=Sun,
+        04-Nov-18 18:44:34 GMT
+      - ep202=Kj9MXkXC9rOX4HQRb1DoZB2AXAU=; Domain=.surveymonkey.com; Path=/; Expires=Sat,
+        02-Feb-19 18:14:34 GMT
+      - ep203=5YZxeeVu7eQqMn9GwsmYbS5lI5w=; Domain=.surveymonkey.com; Path=/; Expires=Sat,
+        02-Feb-19 18:14:34 GMT
+      X-Ratelimit-App-Global-Minute-Limit:
+      - '120'
+      X-Ratelimit-App-Global-Minute-Remaining:
+      - '119'
+      X-Ratelimit-App-Global-Minute-Reset:
+      - '25'
+      X-Ratelimit-App-Global-Day-Limit:
+      - '500'
+      X-Ratelimit-App-Global-Day-Remaining:
+      - '477'
+      X-Ratelimit-App-Global-Day-Reset:
+      - '20725'
+      Link:
+      - <https://api.surveymonkey.net/v3/surveys/43502721/responses/bulk?page=1&per_page=50>;
+        rel="self"
+      Sm-Request-Id:
+      - 348ef360-c198-41b7-b5db-54ce2da2dee0
+      X-Oauth-Scopes-Granted:
+      - collectors_read,responses_read_detail,surveys_read,responses_read
+      X-Oauth-Scopes-Available:
+      - users_read,surveys_read,collectors_read,collectors_write,contacts_read,contacts_write,surveys_write,responses_read,responses_read_detail,responses_write,groups_read,webhooks_read,webhooks_write,library_read,workgroups_read,workgroups_write,workgroups_members_read,workgroups_members_write,roles_read,roles_write,workgroups_shares_read,workgroups_shares_write
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type, Pragma, Cache-Control, X-Requested-With
+      Access-Control-Allow-Methods:
+      - POST, GET, PATCH, PUT, DELETE, OPTIONS, HEAD
+      Access-Control-Allow-Origin:
+      - "*"
+      Expires:
+      - Thu, 01 Jan 1970 00:00:01 GMT
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: ASCII-8BIT
+      string: '{"per_page":50,"total":4,"data":[{"total_time":294,"href":"https:\/\/api.surveymonkey.com\/v3\/surveys\/43502721\/responses\/2760417194","custom_variables":{},"ip_address":"71.198.213.183","id":"2760417194","logic_path":{},"date_modified":"2013-08-12T22:37:44+00:00","response_status":"completed","custom_value":"","analyze_url":"https:\/\/www.surveymonkey.com\/analyze\/browse\/MayZxF9z93_2BVU9jsmFxucM9jsHMMUOtmDkNB7INulkc_3D?respondent_id=2760417194","pages":[{"id":"143202535","questions":[{"variable_id":"6438914518","id":"553892406","answers":[{}]},{"id":"553892672","answers":[{"choice_id":"6438917822"}]},{"id":"553892746","answers":[{"choice_id":"6438918764"},{"choice_id":"6438918766"}]},{"id":"553892857","answers":[{"choice_id":"6438920434"}]},{"id":"553893036","answers":[{"choice_id":"6438922560"},{"choice_id":"6438922563"}]}]},{"id":"143202738","questions":[{"id":"553893214","answers":[{"choice_id":"6438924497","row_id":"6438924492"},{"choice_id":"6438924498","row_id":"6438924494"},{"choice_id":"6438924499","row_id":"6438924493"},{"choice_id":"6438924500","row_id":"6438924496"},{"choice_id":"6438924501","row_id":"6438924495"}]},{"id":"553893347","answers":[{"choice_id":"6438925960","row_id":"6438925953"},{"choice_id":"6438925962","row_id":"6438925951"},{"choice_id":"6438925964","row_id":"6438925956"},{"choice_id":"6438925966","row_id":"6438925954"},{"choice_id":"6438925970","row_id":"6438925958"}]}]},{"id":"143202825","questions":[{"id":"553893587","answers":[{"choice_id":"6438929297","row_id":"6438929300"},{"choice_id":"6438929296","row_id":"6438929301"},{"choice_id":"6438929295","row_id":"6438929302"},{"choice_id":"6438929298","row_id":"6438929303"},{"choice_id":"6438929299","row_id":"6438929304"}]},{"id":"553893749","answers":[{"choice_id":"6438931474","row_id":"6438931479"},{"choice_id":"6438931475","row_id":"6438931480"},{"choice_id":"6438931476","row_id":"6438931481"},{"choice_id":"6438931477","row_id":"6438931482"},{"choice_id":"6438931478","row_id":"6438931483"}]},{"id":"553894121","answers":[{"choice_id":"6438935705","row_id":"6438935712"},{"choice_id":"6438935706","row_id":"6438935713"},{"choice_id":"6438935706","row_id":"6438935714"},{"choice_id":"6438935707","row_id":"6438935715"},{"choice_id":"6438935708","row_id":"6438935716"},{"text":"other
+        answer!","other_id":"6438935710"}]},{"id":"553894330","answers":[{"choice_id":"6438938121","row_id":"6438938128"},{"choice_id":"6438938123","row_id":"6438938129"},{"choice_id":"6438938122","row_id":"6438938130"},{"text":"other
+        answer!","row_id":"6438938130","other_id":"6438938126"},{"choice_id":"6438938122","row_id":"6438938132"},{"text":"other
+        answer with no primary answer!","row_id":"6438938131","other_id":"6438938126"}]}]},{"id":"143203056","questions":[{"id":"553894729","answers":[{"choice_id":"6438941785","row_id":"6438941776"},{"choice_id":"6438941781","row_id":"6438941777"},{"choice_id":"6438941783","row_id":"6438941778"},{"choice_id":"6438941784","row_id":"6438941779"},{"choice_id":"6438941785","row_id":"6438941780"}]},{"id":"553894855","answers":[{"choice_id":"6438943889","row_id":"6438943884"},{"choice_id":"6438943890","row_id":"6438943885"},{"choice_id":"6438943891","row_id":"6438943886"},{"choice_id":"6438943892","row_id":"6438943887"},{"choice_id":"6438943891","row_id":"6438943888"},{"text":"other!","other_id":"6438943882"}]},{"id":"553895042","answers":[{"choice_id":"6438945890","row_id":"6438945881"},{"choice_id":"6438945894","row_id":"6438945881"},{"choice_id":"6438945895","row_id":"6438945881"},{"choice_id":"6438945890","row_id":"6438945883"},{"choice_id":"6438945892","row_id":"6438945883"},{"choice_id":"6438945896","row_id":"6438945883"},{"choice_id":"6438945892","row_id":"6438945884"},{"choice_id":"6438945896","row_id":"6438945884"},{"choice_id":"6438945894","row_id":"6438945886"},{"choice_id":"6438945895","row_id":"6438945888"}]},{"id":"553895213","answers":[{"choice_id":"6438947890","row_id":"6438947884"},{"choice_id":"6438947894","row_id":"6438947884"},{"choice_id":"6438947889","row_id":"6438947885"},{"choice_id":"6438947890","row_id":"6438947885"},{"choice_id":"6438947894","row_id":"6438947885"},{"choice_id":"6438947890","row_id":"6438947886"},{"choice_id":"6438947892","row_id":"6438947886"},{"choice_id":"6438947890","row_id":"6438947887"},{"choice_id":"6438947892","row_id":"6438947887"},{"text":"other!","other_id":"6438947882"}]}]},{"id":"143203226","questions":[{"id":"553895717","answers":[{"col_id":"6438953715","choice_id":"6438953718","row_id":"6438953710"},{"col_id":"6438953721","choice_id":"6438953722","row_id":"6438953710"},{"col_id":"6438953715","choice_id":"6438953718","row_id":"6438953711"},{"col_id":"6438953721","choice_id":"6438953724","row_id":"6438953711"},{"col_id":"6438953715","choice_id":"6438953716","row_id":"6438953712"},{"col_id":"6438953721","choice_id":"6438953724","row_id":"6438953712"},{"col_id":"6438953715","choice_id":"6438953718","row_id":"6438953713"},{"col_id":"6438953721","choice_id":"6438953725","row_id":"6438953713"},{"col_id":"6438953715","choice_id":"6438953716","row_id":"6438953714"},{"col_id":"6438953721","choice_id":"6438953726","row_id":"6438953714"}]},{"id":"553896162","answers":[{"col_id":"6438957425","choice_id":"6438957428","row_id":"6438957420"},{"col_id":"6438957437","choice_id":"6438957438","row_id":"6438957420"},{"col_id":"6438957437","choice_id":"6438957438","row_id":"6438957421"},{"col_id":"6438957425","choice_id":"6438957428","row_id":"6438957422"},{"col_id":"6438957437","choice_id":"6438957439","row_id":"6438957422"},{"col_id":"6438957425","choice_id":"6438957428","row_id":"6438957424"},{"col_id":"6438957437","choice_id":"6438957439","row_id":"6438957424"},{"text":"other!","other_id":"6438957418"}]},{"id":"553896239","answers":[{"text":"single
+        answer"}]}]},{"id":"143203441","questions":[{"id":"553896355","answers":[{"text":"muiltiple
+        answer 1","row_id":"6438959416"},{"text":"multiple answer 2","row_id":"6438959417"},{"text":"multiple
+        answer 3","row_id":"6438959418"}]},{"id":"553896442","answers":[{"text":"12","row_id":"6438960251"},{"text":"1984","row_id":"6438960252"},{"text":"123456789","row_id":"6438960253"}]},{"id":"553896822","answers":[{"text":"zk","row_id":"6438963813"},{"text":"wb","row_id":"6438963814"},{"text":"808
+        Oak","row_id":"6438963815"},{"text":"San Francisco","row_id":"6438963817"},{"text":"CA","row_id":"6438963818"},{"text":"94117","row_id":"6438963819"},{"text":"USA","row_id":"6438963820"},{"text":"zach@wolfbrown.com","row_id":"6438963821"},{"text":"4157963060","row_id":"6438963822"}]},{"id":"553897040","answers":[{"text":"12\/06\/2000","row_id":"6438966163"}]},{"id":"553897144","answers":[{"text":"06:06
+        PM","row_id":"6438967444"},{"text":"08:08 AM","row_id":"6438967445"}]},{"id":"553897260","answers":[{"text":"12\/30\/2001
+        04:05 PM","row_id":"6438968877"}]}]}],"page_path":[],"recipient_id":"","collector_id":"44135648","date_created":"2013-08-12T22:32:49+00:00","survey_id":"43502721","collection_mode":"default","edit_url":"https:\/\/www.surveymonkey.com\/r\/?sm=vg6vFcFPDArh2F3q_2BS_2F9QgTV7yxCU0rSfwei4GiwKZ0FO4ZHcM_2FCJ_2FRn4ZysNIsL","metadata":{}},{"total_time":276,"href":"https:\/\/api.surveymonkey.com\/v3\/surveys\/43502721\/responses\/2765801720","custom_variables":{},"ip_address":"71.198.213.183","id":"2765801720","logic_path":{},"date_modified":"2013-08-15T22:02:52+00:00","response_status":"completed","custom_value":"","analyze_url":"https:\/\/www.surveymonkey.com\/analyze\/browse\/MayZxF9z93_2BVU9jsmFxucM9jsHMMUOtmDkNB7INulkc_3D?respondent_id=2765801720","pages":[{"id":"143202535","questions":[{"variable_id":"6438914514","id":"553892406","answers":[{}]},{"id":"554289973","answers":[{"choice_id":"6443474737"},{"text":"other
+        answer (mc single, horizontal)","other_id":"6443474731"}]},{"id":"553892672","answers":[{"choice_id":"6438917824"}]},{"id":"553892746","answers":[{"choice_id":"6438918764"},{"choice_id":"6438918767"}]},{"id":"553892857","answers":[{"choice_id":"6438920433"}]},{"id":"553893036","answers":[{"text":"mc
+        (multiple answers, with other)","other_id":"6438922556"},{"choice_id":"6438922559"},{"choice_id":"6438922560"},{"choice_id":"6438922561"}]}]},{"id":"143202738","questions":[{"id":"553893131","answers":[{"text":"comment,
+        essay box answer"}]},{"id":"553893214","answers":[{"choice_id":"6438924497","row_id":"6438924492"},{"choice_id":"6438924498","row_id":"6438924495"},{"choice_id":"6438924499","row_id":"6438924493"},{"choice_id":"6438924500","row_id":"6438924494"},{"choice_id":"6438924501","row_id":"6438924496"}]},{"id":"553893347","answers":[{"choice_id":"6438925960","row_id":"6438925953"},{"choice_id":"6438925962","row_id":"6438925954"},{"choice_id":"6438925964","row_id":"6438925951"},{"choice_id":"6438925966","row_id":"6438925956"},{"choice_id":"6438925970","row_id":"6438925958"}]}]},{"id":"143202825","questions":[{"id":"553893587","answers":[{"choice_id":"6438929295","row_id":"6438929300"},{"choice_id":"6438929295","row_id":"6438929301"},{"choice_id":"6438929296","row_id":"6438929302"},{"choice_id":"6438929299","row_id":"6438929303"},{"choice_id":"6438929298","row_id":"6438929304"}]},{"id":"553893749","answers":[{"choice_id":"6438931473","row_id":"6438931479"},{"choice_id":"6438931478","row_id":"6438931480"},{"choice_id":"6438931476","row_id":"6438931481"},{"choice_id":"6438931476","row_id":"6438931482"},{"choice_id":"6438931478","row_id":"6438931483"}]},{"id":"553894121","answers":[{"choice_id":"6438935705","row_id":"6438935712"},{"choice_id":"6438935706","row_id":"6438935713"},{"choice_id":"6438935707","row_id":"6438935714"},{"choice_id":"6438935707","row_id":"6438935715"},{"choice_id":"6438935708","row_id":"6438935716"},{"text":"rating
+        scale question 3 \"other\" answer","other_id":"6438935710"}]},{"id":"553894330","answers":[{"choice_id":"6438938121","row_id":"6438938128"},{"text":"oopr
+        other for row 1","row_id":"6438938128","other_id":"6438938126"},{"choice_id":"6438938122","row_id":"6438938129"},{"choice_id":"6438938123","row_id":"6438938130"},{"choice_id":"6438938122","row_id":"6438938131"},{"text":"oopr
+        other for row 4","row_id":"6438938131","other_id":"6438938126"},{"text":"oopr
+        other for row 5","row_id":"6438938132","other_id":"6438938126"}]}]},{"id":"143203056","questions":[{"id":"553894729","answers":[{"choice_id":"6438941781","row_id":"6438941776"},{"choice_id":"6438941785","row_id":"6438941777"},{"choice_id":"6438941782","row_id":"6438941778"},{"choice_id":"6438941784","row_id":"6438941779"},{"choice_id":"6438941783","row_id":"6438941780"}]},{"id":"553894855","answers":[{"choice_id":"6438943889","row_id":"6438943884"},{"choice_id":"6438943890","row_id":"6438943885"},{"choice_id":"6438943892","row_id":"6438943886"},{"choice_id":"6438943891","row_id":"6438943887"},{"choice_id":"6438943891","row_id":"6438943888"},{"text":"matrix
+        question ooprwo answer","other_id":"6438943882"}]},{"id":"553895042","answers":[{"choice_id":"6438945890","row_id":"6438945881"},{"choice_id":"6438945892","row_id":"6438945881"},{"choice_id":"6438945896","row_id":"6438945881"},{"choice_id":"6438945890","row_id":"6438945883"},{"choice_id":"6438945892","row_id":"6438945883"},{"choice_id":"6438945894","row_id":"6438945884"},{"choice_id":"6438945895","row_id":"6438945884"},{"choice_id":"6438945890","row_id":"6438945886"},{"choice_id":"6438945896","row_id":"6438945886"},{"choice_id":"6438945890","row_id":"6438945888"},{"choice_id":"6438945892","row_id":"6438945888"},{"choice_id":"6438945894","row_id":"6438945888"},{"choice_id":"6438945895","row_id":"6438945888"},{"choice_id":"6438945896","row_id":"6438945888"}]},{"id":"553895213","answers":[{"choice_id":"6438947889","row_id":"6438947884"},{"choice_id":"6438947890","row_id":"6438947885"},{"choice_id":"6438947891","row_id":"6438947885"},{"choice_id":"6438947892","row_id":"6438947887"},{"choice_id":"6438947891","row_id":"6438947888"},{"choice_id":"6438947892","row_id":"6438947888"},{"text":"matrix
+        multiple other answer","other_id":"6438947882"}]}]},{"id":"143203226","questions":[{"id":"553895717","answers":[{"col_id":"6438953715","choice_id":"6438953718","row_id":"6438953710"},{"col_id":"6438953721","choice_id":"6438953723","row_id":"6438953710"},{"col_id":"6438953715","choice_id":"6438953719","row_id":"6438953711"},{"col_id":"6438953721","choice_id":"6438953726","row_id":"6438953711"},{"col_id":"6438953715","choice_id":"6438953716","row_id":"6438953712"},{"col_id":"6438953721","choice_id":"6438953726","row_id":"6438953712"},{"col_id":"6438953715","choice_id":"6438953718","row_id":"6438953713"},{"col_id":"6438953721","choice_id":"6438953723","row_id":"6438953713"},{"col_id":"6438953715","choice_id":"6438953719","row_id":"6438953714"},{"col_id":"6438953721","choice_id":"6438953724","row_id":"6438953714"}]},{"id":"553896239","answers":[{"text":"single
+        textbox"}]}]},{"id":"143203441","questions":[{"id":"553896355","answers":[{"text":"mtbox
+        answer 1","row_id":"6438959416"},{"text":"mtbox answer 3","row_id":"6438959418"}]},{"id":"553896442","answers":[{"text":"123","row_id":"6438960251"},{"text":"4","row_id":"6438960252"},{"text":"56","row_id":"6438960253"}]}]}],"page_path":[],"recipient_id":"","collector_id":"44135648","date_created":"2013-08-15T21:58:15+00:00","survey_id":"43502721","collection_mode":"default","edit_url":"https:\/\/www.surveymonkey.com\/r\/?sm=VtTYsyfUDUfqOaNKjbBZ2KIBezOThh_2FhuDYibTCxv1ESpqu6vfuXNgcP_2F6hVPRsO","metadata":{}},{"total_time":18,"href":"https:\/\/api.surveymonkey.com\/v3\/surveys\/43502721\/responses\/3178142281","custom_variables":{"custom_var_b":"2014-12-24","custom_var_a":"8:00"},"ip_address":"71.202.125.51","id":"3178142281","logic_path":{},"date_modified":"2014-04-11T22:28:39+00:00","response_status":"completed","custom_value":"","analyze_url":"https:\/\/www.surveymonkey.com\/analyze\/browse\/MayZxF9z93_2BVU9jsmFxucM9jsHMMUOtmDkNB7INulkc_3D?respondent_id=3178142281","pages":[{"id":"143202535","questions":[{"variable_id":"6438914518","id":"553892406","answers":[{}]},{"id":"554289973","answers":[{"choice_id":"6443474737"}]}]},{"id":"143202738","questions":[]},{"id":"143202825","questions":[]},{"id":"143203056","questions":[]},{"id":"143203226","questions":[]},{"id":"143203441","questions":[]}],"page_path":[],"recipient_id":"","collector_id":"44135648","date_created":"2014-04-11T22:28:21+00:00","survey_id":"43502721","collection_mode":"default","edit_url":"https:\/\/www.surveymonkey.com\/r\/?sm=nOsyq8krC8KM9J8uHCFhh_2FG6OGG_2BgKlDFU5ecSyF5oH3PaCo5MvWoihPeTHh93oN","metadata":{}},{"total_time":19863893,"href":"https:\/\/api.surveymonkey.com\/v3\/surveys\/43502721\/responses\/2778871364","custom_variables":{},"ip_address":"69.181.221.13","id":"2778871364","logic_path":{},"date_modified":"2014-04-11T23:09:02+00:00","response_status":"completed","custom_value":"","analyze_url":"https:\/\/www.surveymonkey.com\/analyze\/browse\/MayZxF9z93_2BVU9jsmFxucM9jsHMMUOtmDkNB7INulkc_3D?respondent_id=2778871364","pages":[{"id":"143202535","questions":[{"variable_id":"6438914514","id":"553892406","answers":[{}]},{"id":"554289973","answers":[{"choice_id":"6443474736"}]},{"id":"553892672","answers":[{"choice_id":"6438917824"}]},{"id":"553892857","answers":[{"choice_id":"6438920433"}]},{"id":"553893036","answers":[{"choice_id":"6438922563"}]}]},{"id":"143202738","questions":[]},{"id":"143202825","questions":[]},{"id":"143203056","questions":[]},{"id":"143203226","questions":[]},{"id":"143203441","questions":[]}],"page_path":["-1"],"recipient_id":"","collector_id":"44135648","date_created":"2013-08-25T01:24:08+00:00","survey_id":"43502721","collection_mode":"default","edit_url":"https:\/\/www.surveymonkey.com\/r\/?sm=N5MVHzrEL2xW6qHDatxy5WKQ_2FGaNdHCH414m36IkSCjrQ1pBXyLd13cHp912tza4","metadata":{}}],"page":1,"links":{"self":"https:\/\/api.surveymonkey.net\/v3\/surveys\/43502721\/responses\/bulk?page=1&per_page=50"}}'
+    http_version: 
+  recorded_at: Sun, 04 Nov 2018 18:14:35 GMT
+recorded_with: VCR 4.0.0

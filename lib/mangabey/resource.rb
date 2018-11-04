@@ -2,8 +2,10 @@ module Mangabey
   class Resource
     include Model::HasData
 
-    def self.all(client, scope = nil)
-      Mangabey::ClientPager.new(client, self, scope).all
+    # `scope` refers to a prepended url portion; e.g.,
+    # 'surveys/1234' for 'repondents/56789'
+    def self.all(client, scope: nil, query: {})
+      Mangabey::ClientPager.new(client, self, scope, query).all
     end
 
     def self.find(client, id)
